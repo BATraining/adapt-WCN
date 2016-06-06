@@ -1,0 +1,23 @@
+{
+  "name": "adapt-wcn",
+  "version": "1.0.0",
+  "framework": "^2.0.0",
+  "homepage": "https://github.com/BATraining/adapt-wcn",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BATraining/adapt-wcn.git"
+  },
+  "authors": [
+    "Sarveshwar Gavhane <sarveshwar.gavhane@exultcorp.com>"
+  ],
+  "displayName" : "wcn",
+  "extension" : "wcn",
+  "description": "",
+  "main": "/js/adapt-wcn.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_extension"
+}

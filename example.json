@@ -1,0 +1,25 @@
+// To go in the course.json file
+"_wcn": {
+  "_isEnabled": true
+}
+//To go in the component.json file in text component
+ "_wcn": {
+     "_isEnabled": true,
+    "_warning": {
+          "title": "WARNING",
+          "text": "The simple text component can often be the best choice for imparting information, particularly when used in conjunction with complementary graphics."
+      },
+      "_caution": {
+          "title": "CAUTION",
+          "text": "The simple text component can often be the best choice for imparting information, particularly when used in conjunction with complementary "
+      },
+      "_note": {
+          "title": "NOTE",
+          "text": "Sometimes we need to make use of rich media to really drive home a point, bring a complex subject to life or just let audio to literally do the talking. This is when the media component comes to the fore."
+      },
+     "audioSrc": "course/en/audio/hot-graphic1",
+     "audioTypes": {
+         "type": "mp3",
+         "codec": "audio/mpeg"
+     }
+ }
