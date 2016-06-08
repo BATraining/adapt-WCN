@@ -1,5 +1,5 @@
 .wcn-container {
-    width: 100%;
+    width: 99%;
     border-radius: 5px;
     border: 2px solid #DCDDDE;
     margin-bottom: 20px;
@@ -7,16 +7,32 @@
 
 
   .wcn-bodyText {
-      padding: 8px 200px;
+      padding: 8px 50px;
       .wcn-audio {
-         /* width: 100%;*/
-          right: 0px;
+          right: 20px;
           position: absolute;
-          .icon {
-              text-align: right;
-              padding: 0px 5px;
-              float: right;
+          float: right;
+          text-align:right;
+          padding: @embeddedLink-padding @embeddedLink-padding 2px; 
+
+          .icon-sound {
+            .fa();
+            .fa-lg();
+
+            &:before {
+              content: "\f028";
+            }
           }
+
+          .icon-sound-mute {
+            .fa();
+            .fa-lg();
+
+            &:before {
+              content:"\f026"
+            }
+          }
+          
       }
       .wcn-inner {
         .wcn-title-inner{

@@ -41,7 +41,8 @@ define([
               }
               else {
                 this.stopCurrentAudio();
-                this.$('.wcn-audio').removeClass('selected icon-sound');
+                this.$('.wcn-audio').removeClass('selected');
+                this.$('.wcnWithAudio-sound').removeClass('icon-sound');
                 this.$('.wcnWithAudio-sound').eq(curIndex).addClass('icon-sound-mute');
               }
         },
