@@ -4,59 +4,59 @@
     border: 2px solid #DCDDDE;
     margin-bottom: 20px;
     text-align: center;
-
-
-  .wcn-bodyText {
-      padding: 8px 50px;
-      .wcn-audio {
-          right: 20px;
-          position: absolute;
-          float: right;
-          text-align:right;
-          padding: @embeddedLink-padding @embeddedLink-padding 2px; 
-
-          .icon-sound {
+    .wcn-audio {
+        width: 26px;
+        padding: 8px 0px 2px;
+        position: relative;
+        float: right;
+        text-align: left;
+        padding: @embeddedLink-padding @embeddedLink-padding 2px;
+        .icon-sound {
+            font-size: 1.5em !important;
             .fa();
             .fa-lg();
-
             &:before {
-              content: "\f028";
+                content: "\f028";
             }
-          }
-
-          .icon-sound-mute {
+        }
+        .icon-sound-mute {
+            font-size: 1.5em !important;
             .fa();
             .fa-lg();
-
             &:before {
-              content:"\f026"
+                content: "\f026"
             }
-          }
-          
-      }
-      .wcn-inner {
-        .wcn-title-inner{
-          font-weight: 700;
-          padding-bottom: 8px;
-          text-align: center;
-          text-transform: uppercase;
         }
-        .title-inner{
-          text-align: center;
-          margin-bottom: 8px;
-          color: #102a3e;
+    }
+    .wcn-bodyText {
+        .full {
+            padding: 8px 200px;
         }
-        .warning {
-          color: #ff0000;
+        .half {
+            padding: 8px 50px;
         }
-        .caution {
-          color: #ffa804;
+        .wcn-inner {
+            .wcn-title-inner {
+                font-weight: 700;
+                padding-bottom: 8px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .title-inner {
+                text-align: center;
+                margin-bottom: 8px;
+                color: #102a3e;
+            }
+            .warning {
+                color: #ff0000;
+            }
+            .caution {
+                color: #ffa804;
+            }
+            .note {
+                color: #0101ff;
+            }
         }
-        .note {
-          color: #0101ff;
-        }
-      }
-
-  }
-
+    }
 }
+
