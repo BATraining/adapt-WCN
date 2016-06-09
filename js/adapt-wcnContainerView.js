@@ -16,7 +16,12 @@ define([
             this.listenTo(Adapt, 'remove', this.remove);
             this.render();
             this.model.set("_currentAudioElement", '');
-        },
+            this.model.set("_isFull",this.model.get('_componentLayout'));
+            if(this.model.get('_componentLayout') === true)
+              this.$('.wcn-bodyText').css('padding','8px 200px');
+            else
+             this.$('.wcn-bodyText').css('padding','8px 50px');
+         },
 
         render: function() {
             var data = this.model.toJSON();
