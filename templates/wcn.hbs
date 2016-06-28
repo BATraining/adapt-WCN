@@ -1,0 +1,53 @@
+<div class="wcn-inner" >
+   <div class="wcn-inner-text">
+    <div class="wcn-container ">
+             {{#if audioSrc}}
+                    <a href="#" class="wcn-audio" tabindex="0">
+                        <div class="wcnWithAudio-sound component-item-text-color icon icon-sound icon-sound-mute{{#if _audio_404}}audio_404{{/if}}"></div>
+                    </a>
+                  {{/if}}
+                 {{#if audioSrc}}
+                    <div class="wcn-item-audio audio" tabindex="0">
+                        <audio preload="none">
+                            {{#if audioTypes}}
+                            <source src="{{./audioSrc}}.{{audioTypes.type}}" type="{{audioTypes.codec}}">
+                            {{/if}}
+                        </audio>
+                    </div>
+                 {{/if}}
+        <div class="wcn-bodyText">
+                 
+                 {{#if _warning}}
+                    <div class="wcn-inner">
+                            <div class="wcn-title-inner warning-title warning">
+                            {{{a11y_text _warning.title}}}
+                            </div>
+                            <div class="title-inner" tabindex="0">
+                                {{_warning.text}}
+                            </div>
+                    </div>
+                {{/if}}
+                {{#if _caution}}
+                    <div class="wcn-inner">
+                            <div class="wcn-title-inner caution-title  caution" >
+                                 {{{a11y_text _caution.title}}}
+                            </div>
+                            <div class="title-inner" tabindex="0">
+                             {{_caution.text}}
+                            </div>
+                    </div>
+                 {{/if}}
+            {{#if _note}}
+                <div class="wcn-inner">
+                        <div class="wcn-title-inner note-title note">
+                            {{{a11y_text _note.title}}}
+                        </div>
+                        <div class="title-inner" tabindex="0">
+                            {{_note.text}}
+                        </div>
+                </div>
+            {{/if}}
+        </div>
+     </div>
+    </div>
+</div>
