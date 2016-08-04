@@ -18,9 +18,9 @@ define([
             this.model.set("_currentAudioElement", '');
             this.model.set("_isFull",this.model.get('_componentLayout'));
             if(this.model.get('_componentLayout') === true)
-              this.$('.wcn-bodyText').css('padding','8px 200px');
+               this.$('.wcn-bodyText').css('padding','8px 200px');
             else
-             this.$('.wcn-bodyText').css('padding','8px 50px');
+              this.$('.wcn-bodyText').css('padding','8px 50px');
          },
 
         render: function() {
@@ -30,7 +30,7 @@ define([
             return this;
         },
 
-        onClickAudioButton: function (event) {
+        onClickAudioButton: function (event) { console.log(event);
              if(event && event.preventDefault) event.preventDefault();
              var audioElement = this.model.get("_currentAudioElement");
              var $currentSelected = $(event.currentTarget);
