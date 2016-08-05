@@ -1,7 +1,7 @@
 adapt-wcn
 =========================
 
-To Displays the information about the text component that separated by three sections Warning,Caution,Note and has its own audio based on the text it includes 
+To Displays the information about the component that separated by three sections Warning,Caution,Note and has its own audio based on the text it includes.
 
 Installation
 ------------
