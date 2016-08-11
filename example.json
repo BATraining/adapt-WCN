@@ -4,7 +4,7 @@
 }
 //To go in the component.json file in text component
  "_wcn": {
-     "_isEnabled": true,
+    "_isEnabled": true,
     "_warning": {
           "title": "WARNING",
           "text": "The simple text component can often be the best choice for imparting information, particularly when used in conjunction with complementary graphics."

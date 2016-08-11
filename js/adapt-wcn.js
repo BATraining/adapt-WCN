@@ -14,7 +14,6 @@ define([
                 } else {
                     wcnComponentData._componentLayout=false;
                 }
-
                 var $wcnView = new wcnContainerView({model: new Backbone.Model(wcnComponentData)}).$el;
                 var $componentBody = wcnComponentView.$el.find('.component-body');
                 $wcnView.insertAfter($componentBody);
