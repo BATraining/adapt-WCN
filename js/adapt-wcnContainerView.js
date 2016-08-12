@@ -33,11 +33,10 @@ define([
             return this;
         },
 
-        onClickAudioButton: function(event) {
+        onClickAudioButton: function(event) { 
             if (event && event.preventDefault) event.preventDefault();
             var audioElement = this.model.get("_currentAudioElement");
             var $currentSelected = $(event.currentTarget);
-
             if (audioElement === '' && !$currentSelected.hasClass('selected')) {
                 var audioElement = this.$('.wcn-item-audio audio')[0];
                 this.playAudioForElement(audioElement);
@@ -61,6 +60,7 @@ define([
         },
 
         onAudioEnded: function(event) {
+            this.$('.wcn-audio').removeClass('selected');
             this.$('.wcnWithAudio-sound').removeClass('icon-sound').addClass('icon-sound-mute');
             this.model.get("_currentAudioElement").currentTime = 0.0;
             this.model.set("_currentAudioElement", '');
