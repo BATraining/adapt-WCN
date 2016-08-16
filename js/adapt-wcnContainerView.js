@@ -9,12 +9,14 @@ define([
         template: "wcn-container",
 
         events: {
-            'click .wcn-audio': 'onClickAudioButton'
+            'click .wcn-audio': 'onClickAudioButton',
+            'stop': 'stopAudioWCN'
         },
 
         initialize: function(options) {
 
             this.listenTo(Adapt, 'remove', this.remove);
+            this.listenTo(Adapt, "wcnAudioPlay", this.stopCurrentAudio);
             this.render();
             this.$('audio').on('ended', _.bind(this.onAudioEnded, this));
             this.model.set("_currentAudioElement", '');
@@ -33,7 +35,7 @@ define([
             return this;
         },
 
-        onClickAudioButton: function(event) { 
+        onClickAudioButton: function(event) {
             if (event && event.preventDefault) event.preventDefault();
             var audioElement = this.model.get("_currentAudioElement");
             var $currentSelected = $(event.currentTarget);
@@ -76,8 +78,23 @@ define([
                     audioElement.currentTime = 0.0;
                 }
                 this.model.set("_currentAudioElement", '');
+                this.$('.wcn-audio').removeClass('selected');
+                this.$('.wcnWithAudio-sound').addClass('icon-sound-mute');
             }
-        }
+        },
+
+        stopAudioWCN: function(){
+            var that = this;
+              that.$('.wcn-item-audio audio').each(function() {
+                this.pause();
+                this.removeEventListener('ended', that.ended);
+              });
+            this.$('.wcn-audio').removeClass('selected');
+            this.$('.wcnWithAudio-sound').addClass('icon-sound-mute');
+            this.model.get("_currentAudioElement").currentTime = 0.0;
+            this.model.set("_currentAudioElement", '');
+            return false;
+        },
     });
     return wcnContainerView;
 });
